@@ -11,30 +11,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(62, 180, 137);
     background: linear-gradient(159deg, rgba(62, 180, 137, 1) 0%, rgba(144, 238, 144, 1) 100%);
-    font-family: "poppins", serif;
+    font-family: "Poppins", serif;
 }
 
 #congratulations-message {
     position: fixed;
-    /* Fix the element relative to the viewport */
     top: 50%;
-    /* Position vertically at the center */
     left: 50%;
-    /* Position horizontally at the center */
     transform: translate(-50%, -50%);
-    /* Adjust for the element's size */
     background-color: rgba(0, 0, 0, 0.9);
-    /* Semi-transparent background */
     color: white;
     padding: 20px;
     border-radius: 10px;
     font-size: 24px;
     display: none;
-    /* Hide the message initially */
     z-index: 9999;
-    /* Ensure the message is on top of other elements */
 }
 
 .main {
@@ -45,38 +37,35 @@ body {
 }
 
 .header {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: 100vw;
     margin-bottom: 60px;
+    margin-top: 60px;
     position: relative;
-    /* Added for positioning */
 }
 
 h1 {
     color: rgb(255, 54, 3);
-    font-size: 4S4px;
+    font-size: 34px;
     letter-spacing: 0.10rem;
     background: #121212;
     border-radius: 20px;
     padding: 5px 20px;
     margin-top: 10px;
     position: absolute;
-    /* Center the h1 */
     left: 50%;
     transform: translateX(-50%);
+    text-align: center;
 }
 
 .items {
     display: flex;
     align-items: center;
     gap: 20px;
-    /* Space between timer and button */
     margin-left: auto;
-    /* Push items to the right */
 }
 
 button {
@@ -89,12 +78,10 @@ button {
     padding: 10px 20px;
     cursor: pointer;
     margin-right: 30px;
-
 }
 
 button:hover {
     background-color: #afc3d4e1;
-    background: transparent;
     transform: scale(0.97);
     cursor: pointer;
 }
@@ -161,7 +148,7 @@ button:hover {
     border-radius: 5px;
     display: flex;
     align-items: center;
-    margin-left: 60px
+    margin-left: 60px;
 }
 
 #displayTime {
@@ -186,4 +173,37 @@ button:hover {
 
 .memory-game.shuffling .memory-card {
     animation: shuffleAnimation 1s ease-in-out;
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .memory-game {
+        width: 100%;
+        height: auto;
+    }
+
+    .memory-card {
+        width: calc(33.333% - 10px);
+        /* Three cards per row */
+        height: calc(33.333% - 10px);
+        /* Maintain aspect ratio */
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .timer {
+        font-size: 16px;
+        margin-left: 20px;
+    }
 }
