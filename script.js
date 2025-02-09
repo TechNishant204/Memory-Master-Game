@@ -1,9 +1,8 @@
 const cards = document.querySelectorAll(".memory-card");
-let hasFlippedCard = false; //state of the card
+let hasFlippedCard = false;
 let lockBoard = false;
-let firstCard, secondCard; // to store the state of first card and second card
+let firstCard, secondCard;
 
-//function to flip the card and then check for match
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -23,7 +22,6 @@ function flipCard() {
   }
 }
 
-//function to check for match
 function checkForMatch() {
   if (firstCard.dataset.framework === secondCard.dataset.framework) {
     // Match found
@@ -45,15 +43,12 @@ function disableCards() {
   resetBoard();
 }
 
-//function to unflip the cards if they don't match
 function unflipCards() {
   lockBoard = true;
 
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
-
-    checkForWin(); // Check for win after unflipping cards
 
     resetBoard();
   }, 1000);
@@ -69,7 +64,10 @@ function restartGame() {
   cards.forEach((card) => card.addEventListener("click", flipCard));
   shuffle();
   resetBoard();
-  document.getElementById("congratulations-message").style.display = "none";
+
+  // Hide the congratulations message immediately on restart
+  const message = document.getElementById("congratulations-message");
+  message.style.display = "none";
 }
 
 function checkForWin() {
@@ -78,11 +76,14 @@ function checkForWin() {
   );
 
   if (allMatched) {
-    // Display congratulations message if all cards are matched
     setTimeout(() => {
-      document.getElementById("congratulations-message").style.display =
-        "block";
-      alert("Congratulations, you won!"); // Optional: you can also show a browser pop-up alert
+      const message = document.getElementById("congratulations-message");
+      message.style.display = "block";
+
+      // Automatically hide the message after 3 seconds
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 3000);
     }, 1000);
   }
 }
@@ -96,5 +97,5 @@ function checkForWin() {
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
-// Example of calling restartGame function
+// Restart button functionality
 document.querySelector("#restart").addEventListener("click", restartGame);
