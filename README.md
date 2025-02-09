@@ -50,9 +50,9 @@ That's it! You're ready to play.
 
 <p>We welcome contributions to make this game even better! To contribute:</p>
 
-Fork the repository.
+<h3>Fork the repository.</h3>
 
-Create a new branch for your feature:
+<h4>Create a new branch for your feature:</h4>
 
 git checkout -b feature-name
 
@@ -76,7 +76,7 @@ Open a pull request on GitHub.
 
 <h2>🎯 Future Enhancements</h2>
 <ul>
-<li>>Add timer functionality for a competitive edge.</li
+<li>Add timer functionality for a competitive edge.</li>
 
 <li>Introduce difficulty levels with varying numbers of cards.</li>
 
