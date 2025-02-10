@@ -32,17 +32,19 @@ Shuffle Mechanism: Cards shuffle randomly on every game restart for a fresh expe
 
 Follow these steps to get the game running locally:
 
-Clone the repository:
+<h4>Clone the repository:</h4>
+<ul>
+<li>git clone https://github.com/TechNishant204/memory-master-game.git</li>
 
-git clone https://github.com/yourusername/memory-game.git
+<li>Navigate to the project directory:</li>
 
-Navigate to the project directory:
+<li>cd memory-game</li>
 
-cd memory-game
+<li>Open index.html in your browser:</li>
 
-Open index.html in your browser:
+<li>open index.html</li>
+</ul>
 
-open index.html
 
 That's it! You're ready to play.
 
