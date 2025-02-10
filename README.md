@@ -28,7 +28,7 @@ Shuffle Mechanism: Cards shuffle randomly on every game restart for a fresh expe
 
 ![image](https://github.com/user-attachments/assets/69d7bb18-a7ef-42bf-8e4b-2f5528c4ae88)
 
-🛠️ Installation
+<h2>🛠️ Installation</h2>
 
 Follow these steps to get the game running locally:
 
@@ -46,7 +46,7 @@ Follow these steps to get the game running locally:
 </ul>
 
 
-That's it! You're ready to play.
+<p>That's it! You're ready to play.</p>
 
 <h2>🤝 Contributing</h2>
 
@@ -55,18 +55,16 @@ That's it! You're ready to play.
 <h3>Fork the repository.</h3>
 
 <h4>Create a new branch for your feature:</h4>
+<ul>
+<li></li>git checkout -b feature-name</li>
 
-git checkout -b feature-name
+<li>Make your changes and commit them: git commit -m "Add a new feature"</li>
 
-Make your changes and commit them:
+<li>Push the changes to your fork: git push origin feature-name</li>
 
-git commit -m "Add a new feature"
+<li> Open a pull request on GitHub.</li>  
+</ul>
 
-Push the changes to your fork:
-
-git push origin feature-name
-
-Open a pull request on GitHub.
 
 <h2>🧑‍💻 Technologies Used</h2>
 
